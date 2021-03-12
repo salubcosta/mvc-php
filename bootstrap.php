@@ -5,7 +5,7 @@ $router = require __DIR__ .'/router.php';
 
 $obj = $router->handler();
 
-$controller = new $obj['class'];
+$controller = new $obj['class'](new App\Models\User);
 $action = $obj['action'];
 echo $controller->$action();
 
