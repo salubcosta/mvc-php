@@ -10,7 +10,9 @@ class UsersController extends \CODE\Controller
     // }
     public function index()
     {
-        return 'index - usuários';
+        // $this->render(['nome'=>'salumao'], 'users/index');
+        $user = $this->model->get();
+        $this->render($user);
     }
 
     public function create()
