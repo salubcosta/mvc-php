@@ -4,6 +4,11 @@ namespace App\Controllers;
 
 class UsersController extends \CODE\Controller
 {
+    // public function __construct(\App\Models\User $model)
+    // {
+    //     var_dump(\get_class($model));
+    //     $this->model = $model;
+    // }
     // public function handler()
     // {
     //     return self::class;
