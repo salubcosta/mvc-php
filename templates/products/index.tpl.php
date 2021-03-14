@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Products</h1>
+    <p>Table name: <?php echo $table; ?></p>
 </body>
 </html>

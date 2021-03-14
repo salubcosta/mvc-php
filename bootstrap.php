@@ -2,6 +2,7 @@
 
 require __DIR__.'/vendor/autoload.php';
 $router = require __DIR__ .'/router.php';
+$resolver = require __DIR__ .'/resolver.php';
 
 $obj = $router->handler();
 
@@ -14,4 +15,4 @@ $obj = $router->handler();
 
 // echo (new App\Controllers\UsersController)->handler();
 
-(new CODE\Resolver)->handler($obj['class'], $obj['action']);
+$resolver->handler($obj['class'], $obj['action']);

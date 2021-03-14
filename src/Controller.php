@@ -9,6 +9,7 @@ class Controller
     public function __construct(Model $model)
     {
         $this->model = $model;
+        $this->configModel();
     }
 
     protected function render(array $data = [], string $view = null)
@@ -27,5 +28,12 @@ class Controller
         $class = array_pop($class);
         $class = preg_replace('/Controller$/', '', $class);
         return strtolower($class);
+    }
+
+    private function configModel()
+    {
+        if(!$this->model->getTableName()){
+            $this->model->setTableName($this->controllerName());
+        }
     }
 }
